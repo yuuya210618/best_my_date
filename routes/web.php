@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', [IngredientController::class, 'welcome'])->name('welcome'); //追加
 
 Route::post('/store', [IngredientController::class, 'store'])->name('store'); //追加
+
+Route::get('/create', [IngredientController::class, 'create'])->name('create');

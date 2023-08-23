@@ -7,7 +7,7 @@ use App\Models\Ingredient;
 
 class IngredientController extends Controller
 {
-  
+
     public function welcome()
     {
         $ingredients = Ingredient::all();
@@ -15,11 +15,18 @@ class IngredientController extends Controller
         return view('welcome', compact('ingredients'));
     }
 
+
+    public function create()
+    {
+        return view('create');
+    }
+
+
     public function store(Request $request)
     {
         $ingredient = new Ingredient(); 
         $ingredient->ingredients_name = $request->ingredients_name;
-        $ingredient->best_my_date = $request->best_my_date;  
+        $food->best_my_date = $request->best_my_date;  
         $ingredient->save();
 
         return redirect()->action([IngredientController::class, 'welcome']);

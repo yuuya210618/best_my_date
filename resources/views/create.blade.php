@@ -8,3 +8,5 @@
 
         <button>食品追加</button>
     </form>
+
+    <a href="{{ route('welcome') }}">戻る</a>

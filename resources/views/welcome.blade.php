@@ -5,7 +5,15 @@
     <title>Best_my_date</title>
 </head>
 <body>
+
+<?php
+ $time = date("Y年m月j日 Ah:i");
+ print $time;
+?>
+
+<div>
 <a href="{{ route('create') }}">食材記録</a>
+</div>
 
     <div>
         <hi>食材一覧</h1>

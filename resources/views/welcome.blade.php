@@ -7,12 +7,23 @@
 <body>
 <a href="{{ route('create') }}">食材記録</a>
 
-    <ul>
+    <div>
+        <hi>食材一覧</h1>
+        <ui>
         @foreach ($ingredients as $ingredient)
-            <li>{{ $ingredient->ingredients_name }}</li>
-        
+            <li><span>食材名：{{ $ingredient->ingredients_name }}</span></li>
+            <span>賞味期限：{{ $ingredient->best_my_date }}</span>
+            <?php
+            $day1 = new DateTime($ingredient->best_my_date);
+            $day2 = new DateTime('today');
+ 
+            $interval = $day1->diff($day2);
+ 
+            echo $interval->format('残り日数 %a日');
+            ?>
         @endforeach
-    </ul>
+        </ui>
+    </div>
 
 </body>
 </html>

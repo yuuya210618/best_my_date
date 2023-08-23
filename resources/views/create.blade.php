@@ -1,3 +1,5 @@
+@include('header')
+
 <form method="post" action="{{ route('store') }}">
     @csrf
         <label for="ingredients_name">食材名</label>

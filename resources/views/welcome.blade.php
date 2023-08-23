@@ -6,10 +6,7 @@
 </head>
 <body>
 
-<?php
- $time = date("Y年m月j日 Ah:i");
- print $time;
-?>
+@include('header')
 
 <div>
 <a href="{{ route('create') }}">食材記録</a>

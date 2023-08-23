@@ -7,12 +7,16 @@
 <body>
 <a href="{{ route('create') }}">食材記録</a>
 
-    <ul>
+    <div>
+        <hi>食材一覧</h1>
+        <ui>
         @foreach ($ingredients as $ingredient)
-            <li>{{ $ingredient->ingredients_name }}</li>
-        
+            <li><span>食材名：{{ $ingredient->ingredients_name }}</span></li>
+            <span>賞味期限：{{ $ingredient->best_my_date }}</span>
         @endforeach
-    </ul>
+        </ui>
+    </div>
+    
 
 </body>
 </html>

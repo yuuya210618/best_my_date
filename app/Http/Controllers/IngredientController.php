@@ -24,9 +24,12 @@ class IngredientController extends Controller
 
     public function store(Request $request)
     {
-        $ingredient = new Ingredient(); 
-        $ingredient->ingredients_name = $request->ingredients_name;
-        $food->best_my_date = $request->best_my_date;  
+        $ingredient_name = $request->input('ingredients_name');
+        $best_my_date = $request->input('best_my_date');  
+
+        $ingredient = new Ingredient();
+        $ingredient->ingredients_name = $ingredient_name;
+        $ingredient->best_my_date = $best_my_date;
         $ingredient->save();
 
         return redirect()->action([IngredientController::class, 'welcome']);

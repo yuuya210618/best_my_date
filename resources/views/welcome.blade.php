@@ -5,7 +5,7 @@
     <title>Best_my_date</title>
 </head>
 <body>
-<a href="{{ route('create') }}">食品記録</a>
+<a href="{{ route('create') }}">食材記録</a>
 
     <ul>
         @foreach ($ingredients as $ingredient)

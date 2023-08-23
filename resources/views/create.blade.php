@@ -1,6 +1,6 @@
 @include('header')
 
-<form method="post" action="{{ route('store') }}">
+<form method="post" action="{{ route('store') }}" style="display: flex; flex-direction: column;">
     @csrf
         <label for="ingredients_name">食材名</label>
         <input type='text' name="ingredients_name" id="ingredients_name">

@@ -1,4 +1,5 @@
 <header>
+<h1>Best_my_date</h1>
 
 <div>
 @if (Auth::check())

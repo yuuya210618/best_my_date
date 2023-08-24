@@ -14,14 +14,14 @@ use App\Http\Controllers\IngredientController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', [IngredientController::class, 'welcome'])->name('welcome'); //追加
+Route::get('/welcome', [IngredientController::class, 'welcome'])->name('welcome'); //追加
 
 Route::post('/store', [IngredientController::class, 'store'])->name('store'); //追加
 

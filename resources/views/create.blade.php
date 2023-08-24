@@ -1,5 +1,7 @@
 @include('header')
 
+
+<h2>食材を登録しよう！</h2>
 <form method="post" action="{{ route('store') }}" style="display: flex; flex-direction: column;">
     @csrf
         <label for="ingredients_name">食材名</label>

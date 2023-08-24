@@ -1,5 +1,6 @@
 <header>
 <h1>Best_my_date</h1>
+<h3>食材を無駄にしないようにしよう！</h3>
 
 <div>
 @if (Auth::check())

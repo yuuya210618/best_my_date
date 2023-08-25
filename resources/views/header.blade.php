@@ -9,6 +9,6 @@
 </div>
 <?php
  $time = date("Y年m月j日 Ah:i");
- print $time;
+ print '現在時刻：' . $time;
 ?>
 </header>

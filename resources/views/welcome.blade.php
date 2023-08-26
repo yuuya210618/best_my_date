@@ -22,9 +22,15 @@
             $day1 = new DateTime($ingredient->best_my_date);
             $day2 = new DateTime('today');
  
-            $interval = $day1->diff($day2);
- 
-            echo $interval->format('残り日数 %a日');
+            if ($day1 < $day2) {
+                $interval = $day2->diff($day1);
+                $remainingDays = $interval->format('%r%a');
+                echo "期限切れ {$remainingDays}日";
+            } else {
+                $interval = $day1->diff($day2);
+                $remainingDays = $interval->format('%a');
+                echo "残り日数 {$remainingDays}日";
+            }
             ?>
         @endforeach
         </ui>

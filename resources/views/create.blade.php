@@ -8,12 +8,11 @@
 <form method="post" action="{{ route('store') }}" style="display: flex; flex-direction: column;">
     @csrf
         <label for="ingredients_name">食材名</label>
-        <input type='text' name="ingredients_name" id="ingredients_name">
-
+        <input type="text" id="ingredients_name" class="form-control" aria-describedby="passwordHelpBlock">
         <label for="賞味期限">賞味期限</label>
-        <input type='date' name="best_my_date" id="best_my_date" >
+        <input type="date" id="best_my_date" class="form-control" aria-describedby="passwordHelpBlock">
 
         <button type="button" class="btn btn-outline-primary">食品追加</button>
     </form>
 
-    <a href="{{ route('welcome') }}">戻る</a>
+    <button type="button" class="btn btn-outline-danger"><a href="{{ route('welcome') }}">戻る</a></button>

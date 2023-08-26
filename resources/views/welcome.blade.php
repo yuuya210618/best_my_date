@@ -6,7 +6,7 @@
 
 </head>
 <body>
-
+<div class="p-3 mb-2 bg-primary text-white">
 @include('header')
 
 <div>
@@ -36,6 +36,10 @@
         @endforeach
         </ui>
     </div>
-
+    </div>
 </body>
 </html>
+
+<header>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">...</div>
+        </headeer>

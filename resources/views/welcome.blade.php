@@ -10,7 +10,7 @@
 @include('header')
 
 <div>
-<a href="{{ route('create') }}">食材記録</a>
+<button type="button" class="btn btn-warning"><a href="{{ route('create') }}">食材記録</a></button>
 </div>
 
     <div>

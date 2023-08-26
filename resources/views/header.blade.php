@@ -8,7 +8,7 @@
 
 <div>
 @if (Auth::check())
-    <a href="{{ route('logout') }}">ログアウト</a>
+<button type="button" class="btn btn-warning"><a href="{{ route('logout') }}">ログアウト</a></button>
 @endif
 </div>
 <?php

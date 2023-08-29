@@ -1,8 +1,8 @@
+<div class="p-3 mb-2 bg-primary text-white">
 @include('header')
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 
 <h2>食材を登録しよう！</h2>
 <form method="post" action="{{ route('store') }}" style="display: flex; flex-direction: column;">
@@ -15,4 +15,6 @@
         <button type="button" class="btn btn-outline-primary">食品追加</button>
     </form>
 
-    <button type="button" class="btn btn-outline-danger"><a href="{{ route('welcome') }}">戻る</a></button>
+    <button type="button" class="btn btn-warning"><a href="{{ route('welcome') }}">戻る</a></button>
+
+    </div>

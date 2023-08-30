@@ -17,8 +17,11 @@
         <hi>食材一覧</h1>
         <ui>
         @foreach ($ingredients as $ingredient)
-            <li><span>食材名：{{ $ingredient->ingredients_name }}</span></li>
-            <span>賞味期限：{{ $ingredient->best_my_date }}</span>
+        <div class="card" style="width: 18rem;">
+        <h2>食材名：{{ $ingredient->ingredients_name }}</h2>
+        <div class="card-body">
+        <h5 class="card-title">賞味期限：{{ $ingredient->best_my_date }}</h5>
+        <p class="card-text">
             <?php
             $day1 = new DateTime($ingredient->best_my_date);
             $day2 = new DateTime('today');
@@ -33,13 +36,15 @@
                 echo "残り日数 {$remainingDays}日";
             }
             ?>
+            </p>
+            </div>
+</div>
         @endforeach
         </ui>
     </div>
     </div>
 </body>
+
 </html>
 
-<header>
-<div class="bg-success p-2" style="--bs-bg-opacity: .5;">...</div>
-        </headeer>
+

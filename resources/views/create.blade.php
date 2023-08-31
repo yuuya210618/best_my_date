@@ -4,7 +4,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<h2>食材を登録しよう！</h2>
+<h2>食材の賞味期限を登録しよう！</h2>
 <form method="post" action="{{ route('store') }}" style="display: flex; flex-direction: column;">
     @csrf
         <label for="ingredients_name">食材名</label>

@@ -16,7 +16,7 @@
 
                     ログインできました！
                     <div>
-                    <a href="{{ route('welcome') }}">トップページ</a>
+                    <a href="{{ route('welcome') }}">トップページへ</a>
                     </div>
                 </div>
             </div>

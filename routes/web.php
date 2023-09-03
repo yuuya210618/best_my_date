@@ -28,3 +28,5 @@ Route::get('/welcome', [IngredientController::class, 'welcome'])->name('welcome'
 Route::post('/store', [IngredientController::class, 'store'])->name('store'); //追加
 
 Route::get('/create', [IngredientController::class, 'create'])->name('create');
+
+Route::get('/question', [IngredientController::class, 'question'])->name('question');

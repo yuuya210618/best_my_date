@@ -21,6 +21,11 @@ class IngredientController extends Controller
         return view('create');
     }
 
+    public function question()
+    {
+        return view('question');
+    }
+
 
     public function store(Request $request)
     {

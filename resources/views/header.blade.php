@@ -6,6 +6,8 @@
 <h1 class="display-1">Best_my_date</h1>
 <p class="h3">食材を無駄にしないようにしよう！</h3>
 
+<h4><?php $user = Auth::user(); ?>{{ $user->name }}</h4>
+
 <div>
 @if (Auth::check())
 <button type="button" class="btn btn-warning"><a href="{{ route('logout') }}">ログアウト</a></button>

@@ -6,7 +6,7 @@
 
 </head>
 <body>
-<div class="p-3 mb-2 bg-primary text-white">
+<div class="p-3 mb-2 bg-light text-dark">
 @include('header')
 
 <div>

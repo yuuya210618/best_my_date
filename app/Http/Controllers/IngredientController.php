@@ -10,7 +10,7 @@ class IngredientController extends Controller
 
     public function welcome()
     {
-        $ingredients = Ingredient::all();
+        $ingredients = Ingredient::where('user_id', \Auth::user()->id)->get();
 
         return view('welcome', compact('ingredients'));
     }

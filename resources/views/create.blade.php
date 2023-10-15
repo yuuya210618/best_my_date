@@ -15,6 +15,13 @@
         <button type="submit" name="submit" class="btn btn-warning btn-sm">食品追加</button>
     </form>
 
+    <style>
+        a {
+            text-decoration: none;
+            color: black; 
+        }
+    </style>
+
     <button type="button" class="btn btn-warning"><a href="{{ route('welcome') }}">戻る</a></button>
 
     </div>

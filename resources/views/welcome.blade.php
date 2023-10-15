@@ -44,6 +44,13 @@
     </div>
     </div>
 
+    <style>
+        a {
+            text-decoration: none;
+            color: black; 
+        }
+    </style>
+
     <button type="button" class="btn btn-warning"><a href="{{ route('question') }}">Q&A</a></button>
 
 </body>

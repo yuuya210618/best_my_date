@@ -33,6 +33,7 @@ class IngredientController extends Controller
         $best_my_date = $request->input('best_my_date');  
 
         $ingredient = new Ingredient();
+        $ingredient->user_id = \Auth::id();
         $ingredient->ingredients_name = $ingredient_name;
         $ingredient->best_my_date = $best_my_date;
         $ingredient->save();
@@ -40,4 +41,8 @@ class IngredientController extends Controller
         return redirect()->action([IngredientController::class, 'welcome']);
     }
 
+    public function user()
+    {
+        return $this->belongsRTO(User::class);
+    }
 }

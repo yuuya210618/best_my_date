@@ -12,7 +12,7 @@
         <label for="賞味期限">賞味期限</label>
         <input type="date" id="best_my_date" name="best_my_date" class="form-control" aria-describedby="passwordHelpBlock">
 
-        <button type="submit" name="submit" class="btn btn-outline-primary">食品追加</button>
+        <button type="submit" name="submit" class="btn btn-warning btn-sm">食品追加</button>
     </form>
 
     <button type="button" class="btn btn-warning"><a href="{{ route('welcome') }}">戻る</a></button>

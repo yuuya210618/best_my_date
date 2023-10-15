@@ -10,6 +10,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function ingredients() 
+    {
+        return $this->hasMany(Ingredient::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

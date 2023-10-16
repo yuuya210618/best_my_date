@@ -26,6 +26,34 @@ class IngredientController extends Controller
         return view('question');
     }
 
+    public function show($id)
+    {
+        $ingredient = Ingredient::find($id)
+        return view('ingredients.show', ['ingredient => $ingredient']);
+    }
+
+    public function edit($id)
+    {
+        $ingredient = Ingredient::find($id)
+        return view('ingredients.edit', ['ingredient => $ingredient']);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $ingredient = Ingredient::find($id)
+        $ingredient->ingredient_name = $request->ingredient_name;
+        $ingredient->best_my_date = $request->best_my_date;
+        $ingredient->save();
+        return redirect('/welcome')
+    }
+
+    public function destroy($id)
+    {
+      $ingredient = Ingredient::find($id);
+      $ingredient->delete();
+      return redirect('/welcome');
+    }
+
 
     public function store(Request $request)
     {

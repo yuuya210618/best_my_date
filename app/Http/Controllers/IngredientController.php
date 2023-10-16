@@ -29,6 +29,11 @@ class IngredientController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'ingredients_name' => 'required',
+            'best_my_date' => 'required',
+        ]);
+        
         $ingredient_name = $request->input('ingredients_name');
         $best_my_date = $request->input('best_my_date');  
 

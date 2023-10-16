@@ -23,10 +23,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/welcome', [IngredientController::class, 'welcome'])->name('welcome'); //追加
+Route::get('/welcome', [IngredientController::class, 'welcome'])->name('welcome'); 
 
-Route::post('/store', [IngredientController::class, 'store'])->name('store'); //追加
+Route::post('/store', [IngredientController::class, 'store'])->name('store'); 
 
 Route::get('/create', [IngredientController::class, 'create'])->name('create');
 
 Route::get('/question', [IngredientController::class, 'question'])->name('question');
+
+Route::get('/update', [IngredientController::class, 'update'])->name('update');
+
+Route::get('/show', [IngredientController::class, 'show'])->name('show');
+
+Route::get('/edit', [IngredientController::class, 'edit'])->name('edit');
+
+Route::get('/destroy', [IngredientController::class, 'destroy'])->name('destroy');

@@ -37,6 +37,7 @@
             }
             ?>
             </p>
+            <button type="button" class="btn btn-warning"><a href="{{ route('ingredients.show', $ingredient->id) }}">詳細</a></button>
             </div>
 </div>
         @endforeach

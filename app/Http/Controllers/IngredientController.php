@@ -36,7 +36,7 @@ class IngredientController extends Controller
     public function edit($id)
     {
         $ingredient = Ingredient::find($id);
-        return view('/edit', ['ingredient => $ingredient']);
+        return view('edit')->with('ingredient', $ingredient);
     }
 
     public function update(Request $request, $id)

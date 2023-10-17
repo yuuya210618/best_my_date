@@ -29,14 +29,14 @@ class IngredientController extends Controller
     public function show($id)
     {
         $ingredient = Ingredient::find($id);
-        return view('ingredients.show', ['ingredient' => $ingredient]);
+        return view('show')->with('ingredient', $ingredient);
 
     }
 
     public function edit($id)
     {
         $ingredient = Ingredient::find($id);
-        return view('ingredients.edit', ['ingredient => $ingredient']);
+        return view('/edit', ['ingredient => $ingredient']);
     }
 
     public function update(Request $request, $id)

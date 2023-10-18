@@ -12,7 +12,13 @@
 </div>
 
 <button type="button" class="btn btn-warning"><a href="{{ route('ingredients.edit', $ingredient->id) }}">編集</a></button>
-<button type="button" class="btn btn-warning"><a href="{{ route('ingredients.destroy', $ingredient->id) }}">削除</a></button>
+
+<form action="{{ route('ingredients.destroy', $ingredient) }}", method="POST">
+    @csrf
+    @method('DELETE')
+<button type="submit" class="btn btn-warning">削除</button>
+</form>
+
 <button type="button" class="btn btn-warning"><a href="{{ route('welcome') }}">戻る</a></button>
 
 <style>

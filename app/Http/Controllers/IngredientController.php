@@ -41,18 +41,28 @@ class IngredientController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'ingredients_name' => 'required',
+            'best_my_date' => 'required',
+        ]);
+        
+        $ingredient_name = $request->input('ingredients_name');
+        $best_my_date = $request->input('best_my_date');  
+
         $ingredient = Ingredient::find($id);
-        $ingredient->ingredient_name = $request->ingredient_name;
-        $ingredient->best_my_date = $request->best_my_date;
+        $ingredient->user_id = \Auth::id();
+        $ingredient->ingredients_name = $ingredient_name;
+        $ingredient->best_my_date = $best_my_date;
         $ingredient->save();
-        return redirect('/welcome');
+
+        return redirect('weilcome');
     }
 
     public function destroy($id)
     {
       $ingredient = Ingredient::find($id);
       $ingredient->delete();
-      return redirect('/welcome');
+      return redirect('welcome');
     }
 
 

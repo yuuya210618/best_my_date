@@ -9,9 +9,9 @@
     @csrf
     @method('PUT')
         <label for="ingredients_name">食材名</label>
-        <input type="text" id="ingredients_name" name="ingredients_name" value ="{{ old('ingredient_name', $ingredient->ingredient_name) }}" class="form-control" aria-describedby="passwordHelpBlock">
+        <input type="text" id="ingredients_name" name="ingredients_name"  class="form-control" aria-describedby="passwordHelpBlock">
         <label for="賞味期限">賞味期限</label>
-        <input type="date" id="best_my_date" name="best_my_date" value ="{{ old('best_my_date', $ingredient->best_my_date) }}" class="form-control" aria-describedby="passwordHelpBlock">
+        <input type="date" id="best_my_date" name="best_my_date"  class="form-control" aria-describedby="passwordHelpBlock">
 
         <button type="submit" name="submit" class="btn btn-warning btn-sm">更新</button>
     </form>

@@ -55,7 +55,7 @@ class IngredientController extends Controller
         $ingredient->best_my_date = $best_my_date;
         $ingredient->save();
 
-        return redirect('weilcome');
+        return redirect('welcome');
     }
 
     public function destroy($id)

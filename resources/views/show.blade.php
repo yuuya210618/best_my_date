@@ -11,13 +11,17 @@
         </div>
 </div>
 
+<div class="p-1">
 <button type="button" class="btn btn-warning"><a href="{{ route('ingredients.edit', $ingredient->id) }}">編集</a></button>
+</div>
 
+<div class="p-1">
 <form action="{{ route('ingredients.destroy', $ingredient) }}", method="POST">
     @csrf
     @method('DELETE')
 <button type="submit" class="btn btn-warning">削除</button>
 </form>
+</div>
 
 <button type="button" class="btn btn-warning"><a href="{{ route('welcome') }}">戻る</a></button>
 
@@ -26,4 +30,6 @@
             text-decoration: none;
             color: black; 
         }
+
+
     </style>

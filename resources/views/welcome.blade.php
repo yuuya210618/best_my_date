@@ -9,6 +9,8 @@
 <div class="p-3 mb-2 bg-light text-dark">
 @include('header')
 
+<img src="..." class="img-fluid" alt="...">
+
 <div>
 <button type="button" class="btn btn-warning"><a href="{{ route('create') }}">食材記録</a></button>
 </div>
